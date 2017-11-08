@@ -104,7 +104,9 @@ One of these extensions adds a new initializer for `SKShader` that loads a shade
 
 As stated above, the only attribute you need to specify in any of the ShaderKit shaders is the sprite’s size. This is only required in some shaders (see below), and with ShaderKitExtension.swift is done like this:
 
-    yourSprite.setValue(SKAttributeValue(size: yourSprite.size), forAttribute: "a_size")
+```swift
+yourSprite.setValue(SKAttributeValue(size: yourSprite.size), forAttribute: "a_size")
+```
 
 
 ## Built-in values
@@ -147,17 +149,18 @@ Renders a checkerboard with user-defined row/column count and colors.
 
 Example code:
 
-    func createCheckerboard() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_rows", float: 12),
-            SKUniform(name: "u_cols", float: 12),
-            SKUniform(name: "u_first_color", color: .white),
-            SKUniform(name: "u_second_color", color: .black),
-        ]
+```swift
+func createCheckerboard() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_rows", float: 12),
+        SKUniform(name: "u_cols", float: 12),
+        SKUniform(name: "u_first_color", color: .white),
+        SKUniform(name: "u_second_color", color: .black),
+    ]
 
-        return SKShader(fromFile: "SHKCheckerboard", uniforms: uniforms)
-    }
-
+    return SKShader(fromFile: "SHKCheckerboard", uniforms: uniforms)
+}
+```
 
 ### Circle Wave
 Renders a circular pulsating wave effect. This comes in four variants: 
@@ -188,31 +191,33 @@ Renders a circular pulsating wave effect. This comes in four variants:
 
 Example code:
 
-    func createCircleWave() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_speed", float: 1),
-            SKUniform(name: "u_brightness", float: 0.5),
-            SKUniform(name: "u_strength", float: 2),
-            SKUniform(name: "u_density", float: 100),
-            SKUniform(name: "u_center", point: CGPoint(x: 0.68, y: 0.33)),
-            SKUniform(name: "u_color", color: UIColor(red: 0, green: 0.5, blue: 0, alpha: 1))
-        ]
+```swift
+func createCircleWave() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_speed", float: 1),
+        SKUniform(name: "u_brightness", float: 0.5),
+        SKUniform(name: "u_strength", float: 2),
+        SKUniform(name: "u_density", float: 100),
+        SKUniform(name: "u_center", point: CGPoint(x: 0.68, y: 0.33)),
+        SKUniform(name: "u_color", color: UIColor(red: 0, green: 0.5, blue: 0, alpha: 1))
+    ]
 
-        return SKShader(fromFile: "SHKCircleWave", uniforms: uniforms)
-    }
+    return SKShader(fromFile: "SHKCircleWave", uniforms: uniforms)
+}
 
-    func createCircleWaveRainbowBlended() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_speed", float: 1),
-            SKUniform(name: "u_brightness", float: 0.5),
-            SKUniform(name: "u_strength", float: 2),
-            SKUniform(name: "u_density", float: 100),
-            SKUniform(name: "u_center", point: CGPoint(x: 0.68, y: 0.33)),
-            SKUniform(name: "u_red", float: -1)
-        ]
+func createCircleWaveRainbowBlended() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_speed", float: 1),
+        SKUniform(name: "u_brightness", float: 0.5),
+        SKUniform(name: "u_strength", float: 2),
+        SKUniform(name: "u_density", float: 100),
+        SKUniform(name: "u_center", point: CGPoint(x: 0.68, y: 0.33)),
+        SKUniform(name: "u_red", float: -1)
+    ]
 
-        return SKShader(fromFile: "SHKCircleWaveRainbowBlended", uniforms: uniforms)
-    }
+    return SKShader(fromFile: "SHKCircleWaveRainbowBlended", uniforms: uniforms)
+}
+```
 
 
 ### Color Alpha
@@ -224,13 +229,15 @@ Colors all clear pixels in the node.
 
 Example code:
 
-    func createColorAlpha() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_color", color: .green)
-        ]
+```swift
+func createColorAlpha() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_color", color: .green)
+    ]
 
-        return SKShader(fromFile: "SHKColorAlpha", uniforms: uniforms)
-    }
+    return SKShader(fromFile: "SHKColorAlpha", uniforms: uniforms)
+}
+```
 
 
 ### Color Non-Alpha
@@ -242,13 +249,15 @@ Colors all clear pixels in the node.
 
 Example code:
 
-    func createColorNonAlpha() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_color", color: .yellow)
-        ]
+```swift
+func createColorNonAlpha() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_color", color: .yellow)
+    ]
 
-        return SKShader(fromFile: "SHKColorNonAlpha", uniforms: uniforms)
-    }
+    return SKShader(fromFile: "SHKColorNonAlpha", uniforms: uniforms)
+}
+```
 
 
 ### Color Invert
@@ -260,9 +269,11 @@ Inverts all colors in a node while retaining transparency.
 
 Example code:
 
-    func createColorInvert() -> SKShader {
-        return SKShader(fromFile: "SHKColorInvert")
-    }
+```swift
+func createColorInvert() -> SKShader {
+    return SKShader(fromFile: "SHKColorInvert")
+}
+```
 
 
 ### Colorize
@@ -275,14 +286,16 @@ Recolors a texture to a user color based on a strength value.
 
 Example code:
 
-    func createColorize() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_color", color: .green),
-            SKUniform(name: "u_strength", float: 1)
-        ]
+```swift
+func createColorize() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_color", color: .green),
+        SKUniform(name: "u_strength", float: 1)
+    ]
 
-        return SKShader(fromFile: "SHKColorize", uniforms: uniforms)
-    }
+    return SKShader(fromFile: "SHKColorize", uniforms: uniforms)
+}
+```
 
 
 ### Desaturate
@@ -294,13 +307,15 @@ Desaturates the colors in a texture.
 
 Example code:
 
-    func createDesaturate() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_strength", float: 0.5),
-        ]
+```swift
+func createDesaturate() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_strength", float: 0.5),
+    ]
 
-        return SKShader(fromFile: "SHKDesaturate", uniforms: uniforms)
-    }
+    return SKShader(fromFile: "SHKDesaturate", uniforms: uniforms)
+}
+```
 
 
 ### Emboss 
@@ -316,29 +331,31 @@ Creates a 3D embossing effect. This comes in two variants:
 
 Example code:
 
-    func createColorEmboss() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_strength", float: 1)
-        ]
+```swift
+func createColorEmboss() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_strength", float: 1)
+    ]
 
-        let attributes = [
-            SKAttribute(name: "a_size", type: .vectorFloat2)
-        ]
+    let attributes = [
+        SKAttribute(name: "a_size", type: .vectorFloat2)
+    ]
 
-        return SKShader(fromFile: "SHKEmbossColor", uniforms: uniforms, attributes: attributes)
-    }
-    
-    func createGrayEmboss() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_strength", float: 1)
-        ]
+    return SKShader(fromFile: "SHKEmbossColor", uniforms: uniforms, attributes: attributes)
+}
 
-        let attributes = [
-            SKAttribute(name: "a_size", type: .vectorFloat2)
-        ]
+func createGrayEmboss() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_strength", float: 1)
+    ]
 
-        return SKShader(fromFile: "SHKEmbossGray", uniforms: uniforms, attributes: attributes)
-    }
+    let attributes = [
+        SKAttribute(name: "a_size", type: .vectorFloat2)
+    ]
+
+    return SKShader(fromFile: "SHKEmbossGray", uniforms: uniforms, attributes: attributes)
+}
+```
 
 
 ### Infrared
@@ -350,9 +367,11 @@ Simulates an infrared camera by coloring brighter objects red and darker objects
 
 Example code:
 
-    func createInfrared() -> SKShader {
-        return SKShader(fromFile: "SHKInfrared")
-    }
+```swift
+func createInfrared() -> SKShader {
+    return SKShader(fromFile: "SHKInfrared")
+}
+```
 
 
 ### Interlace
@@ -367,19 +386,21 @@ Applies an interlacing effect where horizontal lines of original color are separ
 
 Example code:
 
-    func createInterlace() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_width", float: 2),
-            SKUniform(name: "u_color", color: .black),
-            SKUniform(name: "u_strength", float: 0.35),
-        ]
+```swift
+func createInterlace() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_width", float: 2),
+        SKUniform(name: "u_color", color: .black),
+        SKUniform(name: "u_strength", float: 0.35),
+    ]
 
-        let attributes = [
-            SKAttribute(name: "a_size", type: .vectorFloat2)
-        ]
+    let attributes = [
+        SKAttribute(name: "a_size", type: .vectorFloat2)
+    ]
 
-        return SKShader(fromFile: "SHKInterlace", uniforms: uniforms, attributes: attributes)
-    }
+    return SKShader(fromFile: "SHKInterlace", uniforms: uniforms, attributes: attributes)
+}
+```
 
 
 ### Light grid
@@ -394,16 +415,18 @@ Creates a grid of multi-colored flashing lights.
 
 Example code:
 
-    func createLightGrid() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_density", float: 8),
-            SKUniform(name: "u_speed", float: 3),
-            SKUniform(name: "u_group_size", float: 2),
-            SKUniform(name: "u_brightness", float: 3),
-        ]
+```swift
+func createLightGrid() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_density", float: 8),
+        SKUniform(name: "u_speed", float: 3),
+        SKUniform(name: "u_group_size", float: 2),
+        SKUniform(name: "u_brightness", float: 3),
+    ]
 
-        return SKShader(fromFile: "SHKLightGrid", uniforms: uniforms)
-    }
+    return SKShader(fromFile: "SHKLightGrid", uniforms: uniforms)
+}
+```
 
 
 ### Linear gradient
@@ -416,14 +439,16 @@ Creates a linear gradient over the node. Either the start or the end color can b
 
 Example code:
 
-    func createLinearGradient() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_first_color", color: .blue),
-            SKUniform(name: "u_second_color", color: .clear)
-        ]
+```swift
+func createLinearGradient() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_first_color", color: .blue),
+        SKUniform(name: "u_second_color", color: .clear)
+    ]
 
-        return SKShader(fromFile: "SHKLinearGradient", uniforms: uniforms)
-    }
+    return SKShader(fromFile: "SHKLinearGradient", uniforms: uniforms)
+}
+```
 
 
 ### Noise
@@ -440,13 +465,15 @@ Generates random pixels of different colors to simulate noise. This comes in fou
 
 Example code:
 
-    func createStaticGrayNoise() -> SKShader {
-        return SKShader(fromFile: "SHKStaticGrayNoise")
-    }
+```swift
+func createStaticGrayNoise() -> SKShader {
+    return SKShader(fromFile: "SHKStaticGrayNoise")
+}
 
-    func createDynamicRainbowNoise() -> SKShader {
-        return SKShader(fromFile: "SHKDynamicRainbowNoise")
-    }
+func createDynamicRainbowNoise() -> SKShader {
+    return SKShader(fromFile: "SHKDynamicRainbowNoise")
+}
+```
 
 
 ### Radial gradient
@@ -460,15 +487,17 @@ Creates a radial gradient over the node. Either the start or the end color can b
 
 Example code:
 
-    func createRadialGradient() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_first_color", color: .blue),
-            SKUniform(name: "u_second_color", color: .clear),
-            SKUniform(name: "u_center", point: CGPoint(x: 0.75, y: 0.25))
-        ]
+```swift
+func createRadialGradient() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_first_color", color: .blue),
+        SKUniform(name: "u_second_color", color: .clear),
+        SKUniform(name: "u_center", point: CGPoint(x: 0.75, y: 0.25))
+    ]
 
-        return SKShader(fromFile: "SHKRadialGradient", uniforms: uniforms)
-    }
+    return SKShader(fromFile: "SHKRadialGradient", uniforms: uniforms)
+}
+```
 
   
 ### Screen
@@ -483,19 +512,21 @@ Applies an interlacing effect where horizontal and vertical lines of original co
 
 Example code:
 
-    func createScreen() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_width", float: 2),
-            SKUniform(name: "u_color", color: .clear),
-            SKUniform(name: "u_strength", float: 1),
-        ]
+```swift
+func createScreen() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_width", float: 2),
+        SKUniform(name: "u_color", color: .clear),
+        SKUniform(name: "u_strength", float: 1),
+    ]
 
-        let attributes = [
-            SKAttribute(name: "a_size", type: .vectorFloat2)
-        ]
+    let attributes = [
+        SKAttribute(name: "a_size", type: .vectorFloat2)
+    ]
 
-        return SKShader(fromFile: "SHKScreen", uniforms: uniforms, attributes: attributes)
-    }
+    return SKShader(fromFile: "SHKScreen", uniforms: uniforms, attributes: attributes)
+}
+```
 
    
 ### Water
@@ -509,15 +540,17 @@ Warps a textured node to create a water rippling effect. Note: this must be appl
 
 Example code:
 
-    func createWater() -> SKShader {
-        let uniforms: [SKUniform] = [
-            SKUniform(name: "u_speed", float: 3),
-            SKUniform(name: "u_strength", float: 2.5),
-            SKUniform(name: "u_frequency", float: 10)
-        ]
+```swift
+func createWater() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_speed", float: 3),
+        SKUniform(name: "u_strength", float: 2.5),
+        SKUniform(name: "u_frequency", float: 10)
+    ]
 
-        return SKShader(fromFile: "SHKWater", uniforms: uniforms)
-    }
+    return SKShader(fromFile: "SHKWater", uniforms: uniforms)
+}
+```
 
 
 ## ShaderKit Sandbox
