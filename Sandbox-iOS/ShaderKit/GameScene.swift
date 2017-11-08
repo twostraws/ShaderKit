@@ -91,7 +91,7 @@ class GameScene: SKScene {
             SKUniform(name: "u_rows", float: 12),
             SKUniform(name: "u_cols", float: 12),
             SKUniform(name: "u_first_color", color: .white),
-            SKUniform(name: "u_second_color", color: .black),
+            SKUniform(name: "u_second_color", color: .black)
         ]
 
         return SKShader(fromFile: "SHKCheckerboard", uniforms: uniforms)
@@ -104,7 +104,7 @@ class GameScene: SKScene {
             SKUniform(name: "u_strength", float: 2),
             SKUniform(name: "u_density", float: 100),
             SKUniform(name: "u_center", point: CGPoint(x: 0.68, y: 0.33)),
-            SKUniform(name: "u_color", color: UIColor(red: 0, green: 0.5, blue: 0, alpha: 1))
+            SKUniform(name: "u_color", color: SKColor(red: 0, green: 0.5, blue: 0, alpha: 1))
         ]
 
         return SKShader(fromFile: "SHKCircleWave", uniforms: uniforms)
@@ -117,7 +117,7 @@ class GameScene: SKScene {
             SKUniform(name: "u_strength", float: 2),
             SKUniform(name: "u_density", float: 100),
             SKUniform(name: "u_center", point: CGPoint(x: 0.68, y: 0.33)),
-            SKUniform(name: "u_color", color: UIColor(red: 0, green: 0.5, blue: 0, alpha: 1))
+            SKUniform(name: "u_color", color: SKColor(red: 0, green: 0.5, blue: 0, alpha: 1))
         ]
 
         return SKShader(fromFile: "SHKCircleWaveBlended", uniforms: uniforms)
@@ -192,7 +192,7 @@ class GameScene: SKScene {
 
     func createDesaturate() -> SKShader {
         let uniforms: [SKUniform] = [
-            SKUniform(name: "u_strength", float: 0.5),
+            SKUniform(name: "u_strength", float: 0.5)
         ]
 
         return SKShader(fromFile: "SHKDesaturate", uniforms: uniforms)
@@ -325,13 +325,23 @@ class GameScene: SKScene {
     func toggleAlpha() {
         let action: SKAction
 
-        if testNode1.alpha == 0 {
+        if testNode1.alpha <= 0.5 {
             action = SKAction.fadeIn(withDuration: 2)
         } else {
             action = SKAction.fadeOut(withDuration: 2)
         }
 
+        testNode1.removeAllActions()
+        testNode2.removeAllActions()
+
         testNode1.run(action)
         testNode2.run(action)
     }
+
+    #if os(macOS)
+    override func mouseDown(with event: NSEvent) {
+        toggleAlpha()
+    }
+    #endif
 }
+

@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5148C50F1FB31D5E00BAA8B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148C50E1FB31D5E00BAA8B3 /* AppDelegate.swift */; };
+		5148C5111FB31D5E00BAA8B3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5148C5101FB31D5E00BAA8B3 /* GameScene.sks */; };
+		5148C5171FB31D5E00BAA8B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148C5161FB31D5E00BAA8B3 /* ViewController.swift */; };
+		5148C5191FB31D5E00BAA8B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5148C5181FB31D5E00BAA8B3 /* Assets.xcassets */; };
+		5148C51C1FB31D5E00BAA8B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5148C51A1FB31D5E00BAA8B3 /* Main.storyboard */; };
+		5170C16B1FB326B500D4E1ED /* ShaderKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5170C16A1FB326B500D4E1ED /* ShaderKitExtensions.swift */; };
+		5170C1851FB326C600D4E1ED /* SHKCircleWaveRainbowBlended.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C16D1FB326C600D4E1ED /* SHKCircleWaveRainbowBlended.fsh */; };
+		5170C1861FB326C600D4E1ED /* SHKInfrared.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C16E1FB326C600D4E1ED /* SHKInfrared.fsh */; };
+		5170C1871FB326C600D4E1ED /* SHKWater.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C16F1FB326C600D4E1ED /* SHKWater.fsh */; };
+		5170C1881FB326C600D4E1ED /* SHKStaticGrayNoise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1701FB326C600D4E1ED /* SHKStaticGrayNoise.fsh */; };
+		5170C1891FB326C600D4E1ED /* SHKCircleWave.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1711FB326C600D4E1ED /* SHKCircleWave.fsh */; };
+		5170C18A1FB326C600D4E1ED /* SHKColorInvert.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1721FB326C600D4E1ED /* SHKColorInvert.fsh */; };
+		5170C18B1FB326C600D4E1ED /* SHKEmbossColor.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1731FB326C600D4E1ED /* SHKEmbossColor.fsh */; };
+		5170C18C1FB326C600D4E1ED /* SHKRadialGradient.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1741FB326C600D4E1ED /* SHKRadialGradient.fsh */; };
+		5170C18D1FB326C600D4E1ED /* SHKLightGrid.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1751FB326C600D4E1ED /* SHKLightGrid.fsh */; };
+		5170C18E1FB326C600D4E1ED /* SHKLinearGradient.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1761FB326C600D4E1ED /* SHKLinearGradient.fsh */; };
+		5170C18F1FB326C600D4E1ED /* SHKColorAlpha.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1771FB326C600D4E1ED /* SHKColorAlpha.fsh */; };
+		5170C1901FB326C600D4E1ED /* SHKCircleWaveBlended.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1781FB326C600D4E1ED /* SHKCircleWaveBlended.fsh */; };
+		5170C1911FB326C600D4E1ED /* SHKEmbossGray.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1791FB326C600D4E1ED /* SHKEmbossGray.fsh */; };
+		5170C1921FB326C600D4E1ED /* SHKInterlace.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C17A1FB326C600D4E1ED /* SHKInterlace.fsh */; };
+		5170C1931FB326C600D4E1ED /* SHKStaticRainbowNoise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C17B1FB326C600D4E1ED /* SHKStaticRainbowNoise.fsh */; };
+		5170C1941FB326C600D4E1ED /* SHKColorize.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C17C1FB326C600D4E1ED /* SHKColorize.fsh */; };
+		5170C1951FB326C600D4E1ED /* SHKPassthrough.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C17D1FB326C600D4E1ED /* SHKPassthrough.fsh */; };
+		5170C1961FB326C600D4E1ED /* SHKDynamicGrayNoise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C17E1FB326C600D4E1ED /* SHKDynamicGrayNoise.fsh */; };
+		5170C1971FB326C600D4E1ED /* SHKCircleWaveRainbow.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C17F1FB326C600D4E1ED /* SHKCircleWaveRainbow.fsh */; };
+		5170C1981FB326C600D4E1ED /* SHKScreen.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1801FB326C600D4E1ED /* SHKScreen.fsh */; };
+		5170C1991FB326C600D4E1ED /* SHKDynamicRainbowNoise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1811FB326C600D4E1ED /* SHKDynamicRainbowNoise.fsh */; };
+		5170C19A1FB326C600D4E1ED /* SHKDesaturate.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1821FB326C600D4E1ED /* SHKDesaturate.fsh */; };
+		5170C19B1FB326C600D4E1ED /* SHKColorNonAlpha.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1831FB326C600D4E1ED /* SHKColorNonAlpha.fsh */; };
+		5170C19C1FB326C600D4E1ED /* SHKCheckerboard.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1841FB326C600D4E1ED /* SHKCheckerboard.fsh */; };
+		5170C19E1FB326FD00D4E1ED /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5170C19D1FB326FD00D4E1ED /* GameScene.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5148C50B1FB31D5E00BAA8B3 /* ShaderKit Sandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShaderKit Sandbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5148C50E1FB31D5E00BAA8B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5148C5101FB31D5E00BAA8B3 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		5148C5161FB31D5E00BAA8B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5148C5181FB31D5E00BAA8B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5148C51B1FB31D5E00BAA8B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5148C51D1FB31D5E00BAA8B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5148C51E1FB31D5E00BAA8B3 /* ShaderKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShaderKit.entitlements; sourceTree = "<group>"; };
+		5170C16A1FB326B500D4E1ED /* ShaderKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShaderKitExtensions.swift; path = ../../ShaderKitExtensions.swift; sourceTree = "<group>"; };
+		5170C16D1FB326C600D4E1ED /* SHKCircleWaveRainbowBlended.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKCircleWaveRainbowBlended.fsh; sourceTree = "<group>"; };
+		5170C16E1FB326C600D4E1ED /* SHKInfrared.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKInfrared.fsh; sourceTree = "<group>"; };
+		5170C16F1FB326C600D4E1ED /* SHKWater.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKWater.fsh; sourceTree = "<group>"; };
+		5170C1701FB326C600D4E1ED /* SHKStaticGrayNoise.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKStaticGrayNoise.fsh; sourceTree = "<group>"; };
+		5170C1711FB326C600D4E1ED /* SHKCircleWave.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKCircleWave.fsh; sourceTree = "<group>"; };
+		5170C1721FB326C600D4E1ED /* SHKColorInvert.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKColorInvert.fsh; sourceTree = "<group>"; };
+		5170C1731FB326C600D4E1ED /* SHKEmbossColor.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKEmbossColor.fsh; sourceTree = "<group>"; };
+		5170C1741FB326C600D4E1ED /* SHKRadialGradient.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKRadialGradient.fsh; sourceTree = "<group>"; };
+		5170C1751FB326C600D4E1ED /* SHKLightGrid.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKLightGrid.fsh; sourceTree = "<group>"; };
+		5170C1761FB326C600D4E1ED /* SHKLinearGradient.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKLinearGradient.fsh; sourceTree = "<group>"; };
+		5170C1771FB326C600D4E1ED /* SHKColorAlpha.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKColorAlpha.fsh; sourceTree = "<group>"; };
+		5170C1781FB326C600D4E1ED /* SHKCircleWaveBlended.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKCircleWaveBlended.fsh; sourceTree = "<group>"; };
+		5170C1791FB326C600D4E1ED /* SHKEmbossGray.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKEmbossGray.fsh; sourceTree = "<group>"; };
+		5170C17A1FB326C600D4E1ED /* SHKInterlace.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKInterlace.fsh; sourceTree = "<group>"; };
+		5170C17B1FB326C600D4E1ED /* SHKStaticRainbowNoise.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKStaticRainbowNoise.fsh; sourceTree = "<group>"; };
+		5170C17C1FB326C600D4E1ED /* SHKColorize.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKColorize.fsh; sourceTree = "<group>"; };
+		5170C17D1FB326C600D4E1ED /* SHKPassthrough.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKPassthrough.fsh; sourceTree = "<group>"; };
+		5170C17E1FB326C600D4E1ED /* SHKDynamicGrayNoise.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKDynamicGrayNoise.fsh; sourceTree = "<group>"; };
+		5170C17F1FB326C600D4E1ED /* SHKCircleWaveRainbow.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKCircleWaveRainbow.fsh; sourceTree = "<group>"; };
+		5170C1801FB326C600D4E1ED /* SHKScreen.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKScreen.fsh; sourceTree = "<group>"; };
+		5170C1811FB326C600D4E1ED /* SHKDynamicRainbowNoise.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKDynamicRainbowNoise.fsh; sourceTree = "<group>"; };
+		5170C1821FB326C600D4E1ED /* SHKDesaturate.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKDesaturate.fsh; sourceTree = "<group>"; };
+		5170C1831FB326C600D4E1ED /* SHKColorNonAlpha.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKColorNonAlpha.fsh; sourceTree = "<group>"; };
+		5170C1841FB326C600D4E1ED /* SHKCheckerboard.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKCheckerboard.fsh; sourceTree = "<group>"; };
+		5170C19D1FB326FD00D4E1ED /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = "../../Sandbox-iOS/ShaderKit/GameScene.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5148C5081FB31D5E00BAA8B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5148C5021FB31D5D00BAA8B3 = {
+			isa = PBXGroup;
+			children = (
+				5148C50D1FB31D5E00BAA8B3 /* ShaderKit */,
+				5148C50C1FB31D5E00BAA8B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5148C50C1FB31D5E00BAA8B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5148C50B1FB31D5E00BAA8B3 /* ShaderKit Sandbox.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5148C50D1FB31D5E00BAA8B3 /* ShaderKit */ = {
+			isa = PBXGroup;
+			children = (
+				5148C50E1FB31D5E00BAA8B3 /* AppDelegate.swift */,
+				5148C5101FB31D5E00BAA8B3 /* GameScene.sks */,
+				5148C5161FB31D5E00BAA8B3 /* ViewController.swift */,
+				5170C19D1FB326FD00D4E1ED /* GameScene.swift */,
+				5170C16A1FB326B500D4E1ED /* ShaderKitExtensions.swift */,
+				5148C5181FB31D5E00BAA8B3 /* Assets.xcassets */,
+				5148C51A1FB31D5E00BAA8B3 /* Main.storyboard */,
+				5148C51D1FB31D5E00BAA8B3 /* Info.plist */,
+				5170C16C1FB326C600D4E1ED /* Shaders */,
+				5148C51E1FB31D5E00BAA8B3 /* ShaderKit.entitlements */,
+			);
+			path = ShaderKit;
+			sourceTree = "<group>";
+		};
+		5170C16C1FB326C600D4E1ED /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				5170C16D1FB326C600D4E1ED /* SHKCircleWaveRainbowBlended.fsh */,
+				5170C16E1FB326C600D4E1ED /* SHKInfrared.fsh */,
+				5170C16F1FB326C600D4E1ED /* SHKWater.fsh */,
+				5170C1701FB326C600D4E1ED /* SHKStaticGrayNoise.fsh */,
+				5170C1711FB326C600D4E1ED /* SHKCircleWave.fsh */,
+				5170C1721FB326C600D4E1ED /* SHKColorInvert.fsh */,
+				5170C1731FB326C600D4E1ED /* SHKEmbossColor.fsh */,
+				5170C1741FB326C600D4E1ED /* SHKRadialGradient.fsh */,
+				5170C1751FB326C600D4E1ED /* SHKLightGrid.fsh */,
+				5170C1761FB326C600D4E1ED /* SHKLinearGradient.fsh */,
+				5170C1771FB326C600D4E1ED /* SHKColorAlpha.fsh */,
+				5170C1781FB326C600D4E1ED /* SHKCircleWaveBlended.fsh */,
+				5170C1791FB326C600D4E1ED /* SHKEmbossGray.fsh */,
+				5170C17A1FB326C600D4E1ED /* SHKInterlace.fsh */,
+				5170C17B1FB326C600D4E1ED /* SHKStaticRainbowNoise.fsh */,
+				5170C17C1FB326C600D4E1ED /* SHKColorize.fsh */,
+				5170C17D1FB326C600D4E1ED /* SHKPassthrough.fsh */,
+				5170C17E1FB326C600D4E1ED /* SHKDynamicGrayNoise.fsh */,
+				5170C17F1FB326C600D4E1ED /* SHKCircleWaveRainbow.fsh */,
+				5170C1801FB326C600D4E1ED /* SHKScreen.fsh */,
+				5170C1811FB326C600D4E1ED /* SHKDynamicRainbowNoise.fsh */,
+				5170C1821FB326C600D4E1ED /* SHKDesaturate.fsh */,
+				5170C1831FB326C600D4E1ED /* SHKColorNonAlpha.fsh */,
+				5170C1841FB326C600D4E1ED /* SHKCheckerboard.fsh */,
+			);
+			name = Shaders;
+			path = ../../Shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5148C50A1FB31D5E00BAA8B3 /* ShaderKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5148C5211FB31D5E00BAA8B3 /* Build configuration list for PBXNativeTarget "ShaderKit" */;
+			buildPhases = (
+				5148C5071FB31D5E00BAA8B3 /* Sources */,
+				5148C5081FB31D5E00BAA8B3 /* Frameworks */,
+				5148C5091FB31D5E00BAA8B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShaderKit;
+			productName = ShaderKit;
+			productReference = 5148C50B1FB31D5E00BAA8B3 /* ShaderKit Sandbox.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5148C5031FB31D5D00BAA8B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Paul Hudson";
+				TargetAttributes = {
+					5148C50A1FB31D5E00BAA8B3 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5148C5061FB31D5D00BAA8B3 /* Build configuration list for PBXProject "ShaderKit" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5148C5021FB31D5D00BAA8B3;
+			productRefGroup = 5148C50C1FB31D5E00BAA8B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5148C50A1FB31D5E00BAA8B3 /* ShaderKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5148C5091FB31D5E00BAA8B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5148C5111FB31D5E00BAA8B3 /* GameScene.sks in Resources */,
+				5170C18F1FB326C600D4E1ED /* SHKColorAlpha.fsh in Resources */,
+				5170C1931FB326C600D4E1ED /* SHKStaticRainbowNoise.fsh in Resources */,
+				5170C19A1FB326C600D4E1ED /* SHKDesaturate.fsh in Resources */,
+				5170C1911FB326C600D4E1ED /* SHKEmbossGray.fsh in Resources */,
+				5170C1851FB326C600D4E1ED /* SHKCircleWaveRainbowBlended.fsh in Resources */,
+				5170C1941FB326C600D4E1ED /* SHKColorize.fsh in Resources */,
+				5170C18A1FB326C600D4E1ED /* SHKColorInvert.fsh in Resources */,
+				5170C1981FB326C600D4E1ED /* SHKScreen.fsh in Resources */,
+				5170C18D1FB326C600D4E1ED /* SHKLightGrid.fsh in Resources */,
+				5170C18B1FB326C600D4E1ED /* SHKEmbossColor.fsh in Resources */,
+				5170C1861FB326C600D4E1ED /* SHKInfrared.fsh in Resources */,
+				5170C1971FB326C600D4E1ED /* SHKCircleWaveRainbow.fsh in Resources */,
+				5170C1891FB326C600D4E1ED /* SHKCircleWave.fsh in Resources */,
+				5170C1901FB326C600D4E1ED /* SHKCircleWaveBlended.fsh in Resources */,
+				5170C18E1FB326C600D4E1ED /* SHKLinearGradient.fsh in Resources */,
+				5170C1961FB326C600D4E1ED /* SHKDynamicGrayNoise.fsh in Resources */,
+				5170C18C1FB326C600D4E1ED /* SHKRadialGradient.fsh in Resources */,
+				5170C1881FB326C600D4E1ED /* SHKStaticGrayNoise.fsh in Resources */,
+				5170C1951FB326C600D4E1ED /* SHKPassthrough.fsh in Resources */,
+				5170C1921FB326C600D4E1ED /* SHKInterlace.fsh in Resources */,
+				5170C1991FB326C600D4E1ED /* SHKDynamicRainbowNoise.fsh in Resources */,
+				5148C5191FB31D5E00BAA8B3 /* Assets.xcassets in Resources */,
+				5170C19B1FB326C600D4E1ED /* SHKColorNonAlpha.fsh in Resources */,
+				5170C1871FB326C600D4E1ED /* SHKWater.fsh in Resources */,
+				5148C51C1FB31D5E00BAA8B3 /* Main.storyboard in Resources */,
+				5170C19C1FB326C600D4E1ED /* SHKCheckerboard.fsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5148C5071FB31D5E00BAA8B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5148C5171FB31D5E00BAA8B3 /* ViewController.swift in Sources */,
+				5148C50F1FB31D5E00BAA8B3 /* AppDelegate.swift in Sources */,
+				5170C19E1FB326FD00D4E1ED /* GameScene.swift in Sources */,
+				5170C16B1FB326B500D4E1ED /* ShaderKitExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5148C51A1FB31D5E00BAA8B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5148C51B1FB31D5E00BAA8B3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5148C51F1FB31D5E00BAA8B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5148C5201FB31D5E00BAA8B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		5148C5221FB31D5E00BAA8B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ShaderKit/ShaderKit.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B5C26XE59E;
+				INFOPLIST_FILE = ShaderKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.ShaderKit;
+				PRODUCT_NAME = "ShaderKit Sandbox";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		5148C5231FB31D5E00BAA8B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ShaderKit/ShaderKit.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B5C26XE59E;
+				INFOPLIST_FILE = ShaderKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.ShaderKit;
+				PRODUCT_NAME = "ShaderKit Sandbox";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5148C5061FB31D5D00BAA8B3 /* Build configuration list for PBXProject "ShaderKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5148C51F1FB31D5E00BAA8B3 /* Debug */,
+				5148C5201FB31D5E00BAA8B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5148C5211FB31D5E00BAA8B3 /* Build configuration list for PBXNativeTarget "ShaderKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5148C5221FB31D5E00BAA8B3 /* Debug */,
+				5148C5231FB31D5E00BAA8B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5148C5031FB31D5D00BAA8B3 /* Project object */;
+}
