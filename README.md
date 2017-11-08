@@ -91,7 +91,7 @@ However, one thing is consistently specified as an attribute, which is *node siz
 
 By convention, uniform names start with “u” and attribute names start with “a”. So, when you see “u_strength” you know it’s a uniform, and when you see “a_size” you know it’s an attribute.
 
-**Please note note:** there is a cost to uploading uniform and attribute data to the GPU. As a result, you should only specify values that are actually used inside the shader.
+**Please note note:** there is a performance cost to uploading uniform and attribute data to the GPU. As a result, you should only specify values that are actually used inside the shader.
 
 This repository also contains ShaderKitExtensions.swift. This adds a handful of convenience initializers for setting uniforms and attributes from common types: `CGSize`, `CGPoint`, and `SKColor`. (NB: `SKColor` is either `UIColor` or `NSColor` depending on whether you’re using iOS/tvOS/watchOS or macOS.)
 
@@ -175,7 +175,7 @@ Renders a circular pulsating wave effect. This comes in four variants:
 - Uniform: `u_center`, a `CGPoint` representing the center of the gradient, where 0.5/0.5 is dead center
 - Uniform: `u_color`, the SKColor to use. Use darker colors to create a less intense core.
 
-**Parameters for Circle Wave Rainbow and Circle Wave Rainbow Blended:**  
+**Parameters for Circle Wave Rainbow and Circle Wave Rainbow Blended:**
       
 - Uniform: `u_speed`, how fast the wave should travel. Ranges from -2 to 2 work best, where negative numbers cause waves to come inwards; try starting with 1.
 - Uniform: `u_brightness`, how bright the colors should be. Ranges from 0 to 5 work best; try starting with 0.5 and experiment.
@@ -253,7 +253,7 @@ Example code:
 ### Color Invert
 Inverts all colors in a node while retaining transparency.
 
-**Parameters:**  
+**Parameters:**
 
 - None.
 
@@ -261,6 +261,26 @@ Example code:
 
     func createColorInvert() -> SKShader {
         return SKShader(fromFile: "SHKColorInvert")
+    }
+
+
+### Colorize
+Recolors a texture to a user color based on a strength value.
+
+**Parameters:**
+
+- Uniform: `u_color`, the `SKColor` to use. This is multiplied with the original, meaning that blacks remain black.
+- Uniform: `u_strength`, how much of the replacement color to apply. Specify a value between 0 (use original color) and 1 (use replacement color fully).
+
+Example code:
+
+    func createColorize() -> SKShader {
+        let uniforms: [SKUniform] = [
+            SKUniform(name: "u_color", color: .green),
+            SKUniform(name: "u_strength", float: 1)
+        ]
+
+        return SKShader(fromFile: "SHKColorize", uniforms: uniforms)
     }
 
 
@@ -317,6 +337,20 @@ Example code:
         ]
 
         return SKShader(fromFile: "SHKEmbossGray", uniforms: uniforms, attributes: attributes)
+    }
+
+
+### Infrared
+Simulates an infrared camera by coloring brighter objects red and darker objects blue.
+
+**Parameters:**
+
+- None.
+
+Example code:
+
+    func createInfrared() -> SKShader {
+        return SKShader(fromFile: "SHKInfrared")
     }
 
 
@@ -399,7 +433,7 @@ Generates random pixels of different colors to simulate noise. This comes in fou
 3. Dynamic Gray Noise generates grayscale noise that is constantly changing.
 4. Dynamic Rainbow Noise generates multicolor noise that is constantly changing.
 
-**Parameters:**  
+**Parameters:**
 
 - None.
 
@@ -492,6 +526,8 @@ Inside this repository is an example SpriteKit project that demonstrates each of
 If you’ve modified one of the shaders and want to see how it looks, the sandbox is the best place. If you tap the screen the test nodes will alternate between alpha 0 and alpha 1 so you can make sure your modifications blend correctly.
 
 The sandbox has been tested on iPhone 6, 6s, 7, and X, as well as iPad Pro.
+
+Note: although each of these filters could be ported to any shader-supporting platform with little work, I’ve tested them specifically on iOS and SpriteKit.
 
 
 ## Contributing

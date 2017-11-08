@@ -34,7 +34,7 @@
 // SOFTWARE.
 //
 
-void main(void) {
+void main() {
     // bring both speed and strength into the kinds of ranges we need for this effect
     float speed = u_time * u_speed * 0.05;
     float strength = u_strength / 100.0;

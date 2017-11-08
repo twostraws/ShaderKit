@@ -44,11 +44,11 @@ void main() {
     vec4 current_color = SKDefaultShading();
 
     // these values correspond to how important each color is to the overall brightness
-    vec3 grayValues = vec3(0.2125, 0.7154, 0.0721);
+    vec3 gray_values = vec3(0.2125, 0.7154, 0.0721);
 
-    // the dot() function multiples all the colors in our source color with all the values in our grayValues conversion
-    // then sums them; this then gets put into a new vec3 color as its RGB values
-    vec3 desaturated = vec3(dot(current_color.rgb, grayValues));
+    // the dot() function multiples all the colors in our source color with all the values in our
+    // gray_values conversion then sums them; this then gets put into a new vec3 color as its RGB values
+    vec3 desaturated = vec3(dot(current_color.rgb, gray_values));
 
     // if the user requested full desaturation
     if (strength == 1.0) {

@@ -30,6 +30,8 @@
 		511C23B21FB25218001FFFF6 /* SHKColorNonAlpha.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 511C239C1FB25218001FFFF6 /* SHKColorNonAlpha.fsh */; };
 		511C23B31FB25218001FFFF6 /* SHKCheckerboard.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 511C239D1FB25218001FFFF6 /* SHKCheckerboard.fsh */; };
 		511C23B51FB270C8001FFFF6 /* ShaderKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511C23B41FB270C8001FFFF6 /* ShaderKitExtensions.swift */; };
+		511C23B81FB2973A001FFFF6 /* SHKInfrared.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 511C23B61FB291BB001FFFF6 /* SHKInfrared.fsh */; };
+		511C23BA1FB2FFE1001FFFF6 /* SHKColorize.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 511C23B91FB2FFE1001FFFF6 /* SHKColorize.fsh */; };
 		51F934001FB07002003858AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F933FF1FB07002003858AA /* AppDelegate.swift */; };
 		51F934021FB07002003858AA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 51F934011FB07002003858AA /* GameScene.sks */; };
 		51F934061FB07002003858AA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F934051FB07002003858AA /* GameScene.swift */; };
@@ -63,6 +65,8 @@
 		511C239C1FB25218001FFFF6 /* SHKColorNonAlpha.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKColorNonAlpha.fsh; sourceTree = "<group>"; };
 		511C239D1FB25218001FFFF6 /* SHKCheckerboard.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKCheckerboard.fsh; sourceTree = "<group>"; };
 		511C23B41FB270C8001FFFF6 /* ShaderKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShaderKitExtensions.swift; path = ../../ShaderKitExtensions.swift; sourceTree = "<group>"; };
+		511C23B61FB291BB001FFFF6 /* SHKInfrared.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKInfrared.fsh; sourceTree = "<group>"; };
+		511C23B91FB2FFE1001FFFF6 /* SHKColorize.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKColorize.fsh; sourceTree = "<group>"; };
 		51F933FC1FB07002003858AA /* ShaderKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShaderKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F933FF1FB07002003858AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51F934011FB07002003858AA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -95,12 +99,14 @@
 				511C23881FB25218001FFFF6 /* SHKCircleWaveRainbowBlended.fsh */,
 				511C23911FB25218001FFFF6 /* SHKColorAlpha.fsh */,
 				511C238C1FB25218001FFFF6 /* SHKColorInvert.fsh */,
+				511C23B91FB2FFE1001FFFF6 /* SHKColorize.fsh */,
 				511C239C1FB25218001FFFF6 /* SHKColorNonAlpha.fsh */,
 				511C239B1FB25218001FFFF6 /* SHKDesaturate.fsh */,
 				511C23971FB25218001FFFF6 /* SHKDynamicGrayNoise.fsh */,
 				511C239A1FB25218001FFFF6 /* SHKDynamicRainbowNoise.fsh */,
 				511C238D1FB25218001FFFF6 /* SHKEmbossColor.fsh */,
 				511C23931FB25218001FFFF6 /* SHKEmbossGray.fsh */,
+				511C23B61FB291BB001FFFF6 /* SHKInfrared.fsh */,
 				511C23941FB25218001FFFF6 /* SHKInterlace.fsh */,
 				511C238F1FB25218001FFFF6 /* SHKLightGrid.fsh */,
 				511C23901FB25218001FFFF6 /* SHKLinearGradient.fsh */,
@@ -222,9 +228,11 @@
 				511C23A11FB25218001FFFF6 /* SHKCircleWave.fsh in Resources */,
 				511C23AC1FB25218001FFFF6 /* SHKPassthrough.fsh in Resources */,
 				511C23A81FB25218001FFFF6 /* SHKCircleWaveBlended.fsh in Resources */,
+				511C23BA1FB2FFE1001FFFF6 /* SHKColorize.fsh in Resources */,
 				511C23A61FB25218001FFFF6 /* SHKLinearGradient.fsh in Resources */,
 				511C23A41FB25218001FFFF6 /* SHKRadialGradient.fsh in Resources */,
 				511C23A01FB25218001FFFF6 /* SHKStaticGrayNoise.fsh in Resources */,
+				511C23B81FB2973A001FFFF6 /* SHKInfrared.fsh in Resources */,
 				511C23AA1FB25218001FFFF6 /* SHKInterlace.fsh in Resources */,
 				511C23AF1FB25218001FFFF6 /* SHKScreen.fsh in Resources */,
 				511C23B21FB25218001FFFF6 /* SHKColorNonAlpha.fsh in Resources */,

@@ -57,16 +57,18 @@ class GameScene: SKScene {
         shaders.append(("Color Alpha", createColorAlpha()))
         shaders.append(("Color Non-Alpha", createColorNonAlpha()))
         shaders.append(("Color Invert", createColorInvert()))
+        shaders.append(("Colorize", createColorize()))
         shaders.append(("Desaturate", createDesaturate()))
+        shaders.append(("Emboss (Color)", createColorEmboss()))
+        shaders.append(("Emboss (Gray)", createGrayEmboss()))
+        shaders.append(("Infrared", createInfrared()))
+        shaders.append(("Interlace", createInterlace()))
+        shaders.append(("Light Grid", createLightGrid()))
+        shaders.append(("Linear Gradient", createLinearGradient()))
         shaders.append(("Static Gray Noise", createStaticGrayNoise()))
         shaders.append(("Static Rainbow Noise", createStaticRainbowNoise()))
         shaders.append(("Dynamic Gray Noise", createDynamicGrayNoise()))
         shaders.append(("Dynamic Rainbow Noise", createDynamicRainbowNoise()))
-        shaders.append(("Emboss (Color)", createColorEmboss()))
-        shaders.append(("Emboss (Gray)", createGrayEmboss()))
-        shaders.append(("Interlace", createInterlace()))
-        shaders.append(("Light Grid", createLightGrid()))
-        shaders.append(("Linear Gradient", createLinearGradient()))
         shaders.append(("Radial Gradient", createRadialGradient()))
         shaders.append(("Screen", createScreen()))
         shaders.append(("Water", createWater()))
@@ -179,6 +181,15 @@ class GameScene: SKScene {
         return SKShader(fromFile: "SHKColorNonAlpha", uniforms: uniforms)
     }
 
+    func createColorize() -> SKShader {
+        let uniforms: [SKUniform] = [
+            SKUniform(name: "u_color", color: .green),
+            SKUniform(name: "u_strength", float: 1)
+        ]
+
+        return SKShader(fromFile: "SHKColorize", uniforms: uniforms)
+    }
+
     func createDesaturate() -> SKShader {
         let uniforms: [SKUniform] = [
             SKUniform(name: "u_strength", float: 0.5),
@@ -205,6 +216,10 @@ class GameScene: SKScene {
         ]
 
         return SKShader(fromFile: "SHKEmbossGray", uniforms: uniforms, attributes: attributes)
+    }
+
+    func createInfrared() -> SKShader {
+        return SKShader(fromFile: "SHKInfrared")
     }
 
     func createInterlace() -> SKShader {
@@ -247,8 +262,8 @@ class GameScene: SKScene {
 
     func createRadialGradient() -> SKShader {
         let uniforms: [SKUniform] = [
-            SKUniform(name: "u_first_color", color: .blue),
-            SKUniform(name: "u_second_color", color: .clear),
+            SKUniform(name: "u_first_color", color: .clear),
+            SKUniform(name: "u_second_color", color: .darkGray),
             SKUniform(name: "u_center", point: CGPoint(x: 0.75, y: 0.25))
         ]
 
