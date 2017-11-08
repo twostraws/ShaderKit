@@ -555,13 +555,13 @@ func createWater() -> SKShader {
 
 ## ShaderKit Sandbox
 
-Inside this repository is an example SpriteKit project that demonstrates each of the shaders with some example values – try running it if you’re curious how each of the shaders look or perform on your device.
+Inside this repository are example SpriteKit projects for iOS and macOS that demonstrate each of the shaders with some example values – try running them if you’re curious how each of the shaders look or perform on your device.
 
-If you’ve modified one of the shaders and want to see how it looks, the sandbox is the best place. If you tap the screen the test nodes will alternate between alpha 0 and alpha 1 so you can make sure your modifications blend correctly.
+If you’ve modified one of the shaders and want to see how it looks, the sandbox is the best place. If you tap or click the screen the test nodes will alternate between alpha 0 and alpha 1 so you can make sure your modifications blend correctly.
 
-The sandbox has been tested on iPhone 6, 6s, 7, and X, as well as iPad Pro.
+The iOS sandbox has been tested on iPhone 6, 6s, 7, and X, as well as iPad Pro. The macOS sandbox has been tested on a retina MacBook Pro using macOS 10.13.
 
-Note: although each of these filters could be ported to any shader-supporting platform with little work, I’ve tested them specifically on iOS and SpriteKit.
+Note: although each of these filters could be ported to any shader-supporting platform with little work, I’ve tested them specifically on iOS/macOS and SpriteKit.
 
 
 ## Contributing
