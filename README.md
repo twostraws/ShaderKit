@@ -1,4 +1,16 @@
-# ShaderKit
+
+<p align="center">
+    <img src="https://www.hackingwithswift.com/files/shaderkit/shaderkit-logo.png" alt="ShaderKit logo" width="271" height="272" />
+</p>
+
+<p align="center">
+    <img src="https://img.shields.io/badge/License-MIT-orange.svg" />
+    <img src="https://img.shields.io/badge/GLSL-2.0-brightgreen.svg" />    
+    <img src="https://img.shields.io/badge/Swift-4.0-blue.svg" />
+    <a href="https://twitter.com/twostraws">
+        <img src="https://img.shields.io/badge/Contact-@twostraws-lightgrey.svg?style=flat" alt="Twitter: @twostraws" />
+    </a>
+</p>
 
 ShaderKit is an open-source collection of fragment shaders designed for use in SpriteKit games. The shaders are designed to be easy to read and understand, even for relative beginners, so you’ll find each line of code is rephrased in plain English as well as an overall explanation of the algorithm used at the top of each file.
 
