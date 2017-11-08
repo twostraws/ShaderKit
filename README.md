@@ -1,11 +1,13 @@
 # ShaderKit
 
-ShaderKit is an open-source collection of fragment shaders designed for use in SpriteKit games. The shaders are designed to be easy to read and understood, even for beginners, so you’ll find each line of code is rephrased in plain English as well as an overall explanation of the algorithm used at the top of each file.
+ShaderKit is an open-source collection of fragment shaders designed for use in SpriteKit games. The shaders are designed to be easy to read and understand, even for relative beginners, so you’ll find each line of code is rephrased in plain English as well as an overall explanation of the algorithm used at the top of each file.
 
 If you’re already comfortable with shaders then please download one or more that interest you and get going. If not, most of the the remainder of this README acts as a primer for using shaders in SpriteKit.
 
 
-## Examples
+## See it in action
+
+[![Show a video of the shaders in action](https://www.hackingwithswift.com/files/shaderkit/shaderkit-play.png)](https://www.hackingwithswift.com/files/shaderkit/shaderkit-example.mp4)
 
 
 ## TL;DR
@@ -15,7 +17,7 @@ If you use SpriteKit, you can add special effects from ShaderKit to add water ri
 
 ## Credits
 
-ShaderKit was made by [Paul Hudson](https://twitter.com/twostraws) of [Hacking with Swift](https://www.hackingwithswift.com). It’s available under the MIT license, which permits commercial use, modification, distribution, and private use.
+ShaderKit was made by [Paul Hudson](https://twitter.com/twostraws), who writes [free Swift tutorials over at Hacking with Swift](https://www.hackingwithswift.com). It’s available under the MIT license, which permits commercial use, modification, distribution, and private use.
 
 
 ## What are shaders?
@@ -268,29 +270,6 @@ Example code:
     }
 
 
-### Noise
-Generates random pixels of different colors to simulate noise. This comes in four variants:
-
-1. Static Gray Noise generates grayscale noise that doesn’t move.
-2. Static Rainbow Noise generates multicolor noise that doesn’t move.
-3. Dynamic Gray Noise generates grayscale noise that is constantly changing.
-4. Dynamic Rainbow Noise generates multicolor noise that is constantly changing.
-
-**Parameters:**  
-
-- None.
-
-Example code:
-
-    func createStaticGrayNoise() -> SKShader {
-        return SKShader(fromFile: "SHKStaticGrayNoise")
-    }
-
-    func createDynamicRainbowNoise() -> SKShader {
-        return SKShader(fromFile: "SHKDynamicRainbowNoise")
-    }
-
-
 ### Emboss 
 Creates a 3D embossing effect. This comes in two variants:
 
@@ -379,6 +358,7 @@ Example code:
         return SKShader(fromFile: "SHKLightGrid", uniforms: uniforms)
     }
 
+
 ### Linear gradient
 Creates a linear gradient over the node. Either the start or the end color can be translucent to let original pixel colors come through.
 
@@ -396,6 +376,29 @@ Example code:
         ]
 
         return SKShader(fromFile: "SHKLinearGradient", uniforms: uniforms)
+    }
+
+
+### Noise
+Generates random pixels of different colors to simulate noise. This comes in four variants:
+
+1. Static Gray Noise generates grayscale noise that doesn’t move.
+2. Static Rainbow Noise generates multicolor noise that doesn’t move.
+3. Dynamic Gray Noise generates grayscale noise that is constantly changing.
+4. Dynamic Rainbow Noise generates multicolor noise that is constantly changing.
+
+**Parameters:**  
+
+- None.
+
+Example code:
+
+    func createStaticGrayNoise() -> SKShader {
+        return SKShader(fromFile: "SHKStaticGrayNoise")
+    }
+
+    func createDynamicRainbowNoise() -> SKShader {
+        return SKShader(fromFile: "SHKDynamicRainbowNoise")
     }
 
 
