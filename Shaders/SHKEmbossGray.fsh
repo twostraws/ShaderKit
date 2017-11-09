@@ -56,7 +56,7 @@ void main() {
     // if it's not transparent
     if (current_color.a > 0.0) {
         // find the size of one pixel by reading the input size
-        vec2 pixel_size = vec2(1.0 / a_size[0], 1.0 / a_size[1]);
+        vec2 pixel_size = 1.0 / a_size;
 
         // assume our new color is middle gray (R: 0.5, G: 0.5, B: 0.5, A: 1)
         vec4 new_color = vec4(vec3(0.5), 1);

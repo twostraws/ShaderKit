@@ -12,6 +12,7 @@
 		5148C5171FB31D5E00BAA8B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148C5161FB31D5E00BAA8B3 /* ViewController.swift */; };
 		5148C5191FB31D5E00BAA8B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5148C5181FB31D5E00BAA8B3 /* Assets.xcassets */; };
 		5148C51C1FB31D5E00BAA8B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5148C51A1FB31D5E00BAA8B3 /* Main.storyboard */; };
+		514A3DE01FB484B000281527 /* SHKPixelate.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 514A3DDF1FB484B000281527 /* SHKPixelate.fsh */; };
 		5170C16B1FB326B500D4E1ED /* ShaderKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5170C16A1FB326B500D4E1ED /* ShaderKitExtensions.swift */; };
 		5170C1851FB326C600D4E1ED /* SHKCircleWaveRainbowBlended.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C16D1FB326C600D4E1ED /* SHKCircleWaveRainbowBlended.fsh */; };
 		5170C1861FB326C600D4E1ED /* SHKInfrared.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C16E1FB326C600D4E1ED /* SHKInfrared.fsh */; };
@@ -49,6 +50,7 @@
 		5148C51B1FB31D5E00BAA8B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5148C51D1FB31D5E00BAA8B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5148C51E1FB31D5E00BAA8B3 /* ShaderKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShaderKit.entitlements; sourceTree = "<group>"; };
+		514A3DDF1FB484B000281527 /* SHKPixelate.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKPixelate.fsh; sourceTree = "<group>"; };
 		5170C16A1FB326B500D4E1ED /* ShaderKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShaderKitExtensions.swift; path = ../../ShaderKitExtensions.swift; sourceTree = "<group>"; };
 		5170C16D1FB326C600D4E1ED /* SHKCircleWaveRainbowBlended.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKCircleWaveRainbowBlended.fsh; sourceTree = "<group>"; };
 		5170C16E1FB326C600D4E1ED /* SHKInfrared.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKInfrared.fsh; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				5170C1811FB326C600D4E1ED /* SHKDynamicRainbowNoise.fsh */,
 				5170C1821FB326C600D4E1ED /* SHKDesaturate.fsh */,
 				5170C1831FB326C600D4E1ED /* SHKColorNonAlpha.fsh */,
+				514A3DDF1FB484B000281527 /* SHKPixelate.fsh */,
 				5170C1841FB326C600D4E1ED /* SHKCheckerboard.fsh */,
 			);
 			name = Shaders;
@@ -236,6 +239,7 @@
 				5170C1991FB326C600D4E1ED /* SHKDynamicRainbowNoise.fsh in Resources */,
 				5148C5191FB31D5E00BAA8B3 /* Assets.xcassets in Resources */,
 				5170C19B1FB326C600D4E1ED /* SHKColorNonAlpha.fsh in Resources */,
+				514A3DE01FB484B000281527 /* SHKPixelate.fsh in Resources */,
 				5170C1871FB326C600D4E1ED /* SHKWater.fsh in Resources */,
 				5148C51C1FB31D5E00BAA8B3 /* Main.storyboard in Resources */,
 				5170C19C1FB326C600D4E1ED /* SHKCheckerboard.fsh in Resources */,

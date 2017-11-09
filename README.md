@@ -476,6 +476,31 @@ func createDynamicRainbowNoise() -> SKShader {
 ```
 
 
+### Pixelate 
+Pixelates an image based on a strength provided by the user.
+
+**Parameters:**
+
+- Attribute: `a_size`, the size of the node.
+- Uniform: `u_strength`, how large each pixel block should be. Ranges from 2 to 50 work best; try starting with 5.
+
+Example code:
+
+```swift
+func createPixelate() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_strength", float: 8),
+    ]
+
+    let attributes = [
+        SKAttribute(name: "a_size", type: .vectorFloat2)
+    ]
+
+    return SKShader(fromFile: "SHKPixelate", uniforms: uniforms, attributes: attributes)
+}
+```
+
+
 ### Radial gradient
 Creates a radial gradient over the node. Either the start or the end color can be translucent to let original pixel colors come through.
 

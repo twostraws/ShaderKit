@@ -53,7 +53,7 @@ void main() {
     // if it's not transparent
     if (current_color.a > 0.0) {
         // find the size of one pixel by reading the input size
-        vec2 pixel_size = vec2(1.0 / a_size[0], 1.0 / a_size[1]);
+        vec2 pixel_size = 1.0 / a_size;
 
         // copy our current color so we can modify it
         vec4 new_color = current_color;

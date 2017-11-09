@@ -65,6 +65,7 @@ class GameScene: SKScene {
         shaders.append(("Interlace", createInterlace()))
         shaders.append(("Light Grid", createLightGrid()))
         shaders.append(("Linear Gradient", createLinearGradient()))
+        shaders.append(("Pixelate", createPixelate()))
         shaders.append(("Static Gray Noise", createStaticGrayNoise()))
         shaders.append(("Static Rainbow Noise", createStaticRainbowNoise()))
         shaders.append(("Dynamic Gray Noise", createDynamicGrayNoise()))
@@ -258,6 +259,18 @@ class GameScene: SKScene {
 
     func createPassthrough() -> SKShader {
         return SKShader(fromFile: "SHKPassthrough")
+    }
+
+    func createPixelate() -> SKShader {
+        let uniforms: [SKUniform] = [
+            SKUniform(name: "u_strength", float: 8),
+        ]
+
+        let attributes = [
+            SKAttribute(name: "a_size", type: .vectorFloat2)
+        ]
+
+        return SKShader(fromFile: "SHKPixelate", uniforms: uniforms, attributes: attributes)
     }
 
     func createRadialGradient() -> SKShader {

@@ -52,7 +52,7 @@ void main() {
         float pixel_distance = distance(v_tex_coord, u_center);
 
         // create a gradient by combining our R color with G and B values calculated using our texture coordinate, then multiply the result by the provided brightness
-        vec3 gradient_color = vec3(u_color[0], u_color[1], u_color[2]) * brightness;
+        vec3 gradient_color = vec3(u_color.r, u_color.g, u_color.b) * brightness;
 
         // calculate how much color to apply to this pixel by cubing its distance from the center
         float color_strength = pow(1.0 - pixel_distance, 3.0);

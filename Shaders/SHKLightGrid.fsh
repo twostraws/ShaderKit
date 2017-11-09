@@ -48,9 +48,9 @@ void main() {
     vec4 current_color = SKDefaultShading();
 
     // if it's not transparent
-    if (current_color.a != 0.0) {
+    if (current_color.a > 0.0) {
         // STEP 1: split the grid up into groups based on user input
-        vec2 point = v_tex_coord.xy * u_density;
+        vec2 point = v_tex_coord * u_density;
 
         // STEP 2: Calculate the color variance for each group
         // pick two numbers that are unlikely to repeat
