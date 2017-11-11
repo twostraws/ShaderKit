@@ -39,6 +39,7 @@
 		5170C19B1FB326C600D4E1ED /* SHKColorNonAlpha.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1831FB326C600D4E1ED /* SHKColorNonAlpha.fsh */; };
 		5170C19C1FB326C600D4E1ED /* SHKCheckerboard.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5170C1841FB326C600D4E1ED /* SHKCheckerboard.fsh */; };
 		5170C19E1FB326FD00D4E1ED /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5170C19D1FB326FD00D4E1ED /* GameScene.swift */; };
+		83AE0C261FB77815008A1073 /* SHKScanlines.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 83AE0C251FB77815008A1073 /* SHKScanlines.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		5170C1831FB326C600D4E1ED /* SHKColorNonAlpha.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKColorNonAlpha.fsh; sourceTree = "<group>"; };
 		5170C1841FB326C600D4E1ED /* SHKCheckerboard.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKCheckerboard.fsh; sourceTree = "<group>"; };
 		5170C19D1FB326FD00D4E1ED /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = "../../Sandbox-iOS/ShaderKit/GameScene.swift"; sourceTree = "<group>"; };
+		83AE0C251FB77815008A1073 /* SHKScanlines.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKScanlines.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		5170C16C1FB326C600D4E1ED /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				83AE0C251FB77815008A1073 /* SHKScanlines.fsh */,
 				5170C16D1FB326C600D4E1ED /* SHKCircleWaveRainbowBlended.fsh */,
 				5170C16E1FB326C600D4E1ED /* SHKInfrared.fsh */,
 				5170C16F1FB326C600D4E1ED /* SHKWater.fsh */,
@@ -237,6 +240,7 @@
 				5170C1951FB326C600D4E1ED /* SHKPassthrough.fsh in Resources */,
 				5170C1921FB326C600D4E1ED /* SHKInterlace.fsh in Resources */,
 				5170C1991FB326C600D4E1ED /* SHKDynamicRainbowNoise.fsh in Resources */,
+				83AE0C261FB77815008A1073 /* SHKScanlines.fsh in Resources */,
 				5148C5191FB31D5E00BAA8B3 /* Assets.xcassets in Resources */,
 				5170C19B1FB326C600D4E1ED /* SHKColorNonAlpha.fsh in Resources */,
 				514A3DE01FB484B000281527 /* SHKPixelate.fsh in Resources */,
@@ -387,7 +391,7 @@
 				CODE_SIGN_ENTITLEMENTS = ShaderKit/ShaderKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = B5C26XE59E;
+				DEVELOPMENT_TEAM = NK7M84AH48;
 				INFOPLIST_FILE = ShaderKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.ShaderKit;
@@ -403,7 +407,7 @@
 				CODE_SIGN_ENTITLEMENTS = ShaderKit/ShaderKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = B5C26XE59E;
+				DEVELOPMENT_TEAM = NK7M84AH48;
 				INFOPLIST_FILE = ShaderKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.ShaderKit;

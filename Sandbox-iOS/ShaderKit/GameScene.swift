@@ -47,7 +47,6 @@ class GameScene: SKScene {
 
         testNode2.position = CGPoint(x: 150, y: -50)
         addChild(testNode2)
-
         shaders.append(("No Shader", createPassthrough()))
         shaders.append(("Checkerboard", createCheckerboard()))
         shaders.append(("Circle Wave", createCircleWave()))
@@ -66,6 +65,7 @@ class GameScene: SKScene {
         shaders.append(("Light Grid", createLightGrid()))
         shaders.append(("Linear Gradient", createLinearGradient()))
         shaders.append(("Pixelate", createPixelate()))
+        shaders.append(("Scanlines", createScanlines()))
         shaders.append(("Static Gray Noise", createStaticGrayNoise()))
         shaders.append(("Static Rainbow Noise", createStaticRainbowNoise()))
         shaders.append(("Dynamic Gray Noise", createDynamicGrayNoise()))
@@ -281,6 +281,19 @@ class GameScene: SKScene {
         ]
 
         return SKShader(fromFile: "SHKRadialGradient", uniforms: uniforms)
+    }
+    
+    func createScanlines() -> SKShader {
+        let uniforms: [SKUniform] = [
+            SKUniform(name: "u_width", float: 4),
+            SKUniform(name: "u_brightness", float: 0.5),
+            ]
+        
+        let attributes = [
+            SKAttribute(name: "a_size", type: .vectorFloat2)
+        ]
+        
+        return SKShader(fromFile: "SHKScanlines", uniforms: uniforms, attributes: attributes)
     }
 
     func createScreen() -> SKShader {
