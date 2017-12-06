@@ -46,8 +46,7 @@ class GameScene: SKScene {
         addChild(testNode1)
 
         testNode2.position = CGPoint(x: 150, y: -50)
-        addChild(testNode2)
-        shaders.append(("Scanlines", createScanlines()))
+        addChild(testNode2)        
         shaders.append(("No Shader", createPassthrough()))
         shaders.append(("Checkerboard", createCheckerboard()))
         shaders.append(("Circle Wave", createCircleWave()))
@@ -66,7 +65,7 @@ class GameScene: SKScene {
         shaders.append(("Light Grid", createLightGrid()))
         shaders.append(("Linear Gradient", createLinearGradient()))
         shaders.append(("Pixelate", createPixelate()))
-        
+        shaders.append(("Scanlines", createScanlines()))
         shaders.append(("Static Gray Noise", createStaticGrayNoise()))
         shaders.append(("Static Rainbow Noise", createStaticRainbowNoise()))
         shaders.append(("Dynamic Gray Noise", createDynamicGrayNoise()))
