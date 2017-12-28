@@ -285,9 +285,9 @@ class GameScene: SKScene {
     
     func createScanlines() -> SKShader {
         let uniforms: [SKUniform] = [
-            SKUniform(name: "u_width", float: 4),
-            SKUniform(name: "u_brightness", float: 0.5),
-            SKUniform(name: "u_color", color: .red),
+            SKUniform(name: "u_width", float: 4.0),
+            SKUniform(name: "u_brightness", float: 0.75),
+            SKUniform(name: "u_color", color: .white),
             ]
         
         let attributes = [

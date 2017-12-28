@@ -1,8 +1,9 @@
 //
 // Applies an interlacing effect where horizontal lines of original color are separated by lines of another color
 // Attribute: a_size, the size of the node.
-// Uniform: u_width, the (vertical) width of the scanlines.
-// Uniform: u_brightness, brightness of scanlines effect. Specify 0 (black) up to 1 (bright & satturated). 0.5 is normal.
+// Uniform: u_width, the vertical width of the scanlines in pixels. float (e.g. 4).
+// Uniform: u_brightness, brightness of scanlines effect. Specify 0 (black) up to 1 (bright & saturated). float (e.g. 0.75)
+// Uniform: u_color, blend color of scanlines. color (e.g. .white)
 //
 // MIT License
 //
@@ -30,7 +31,7 @@
 
 void main() {
     
-    // Pixelate vertically
+    // 1. Pixelate vertically
     
     // figure out how big individual pixels are in texture space
     vec2 one_over_size = 1.0 / a_size;
@@ -46,7 +47,7 @@ void main() {
     // account node transparency
     vec4 pixel_color = texture2D(u_texture, vec2(v_tex_coord.x, coord_y)) * v_color_mix.a;
 
-    // now add scanlines
+    // 2. Now add scanlines
     
     // if the current color is not transparent
     if (pixel_color.a > 0.0) {
@@ -55,13 +56,15 @@ void main() {
 
         // calculate the force of the scanline at this point
         // modulo of the pixel position against the scanline size dictates strength of line
-        float f = (mod(this_pixel, u_width) / u_width);
-
-        // factor in brightness level and a little saturation (clamp output level between 0 and 1)
-        f = min(max(f + ((u_brightness * 2.0) - 1), 0.3), 1.0);
+        float scanlineForce = (mod(this_pixel, u_width) / u_width);
+        float scanlineBrightness = (u_brightness * 2.0) - 1.0;
+        
+        // factor in brightness level and a little saturation (clamp output level between 0.3 and 1.0)
+        scanlineForce = min(max(scanlineForce + scanlineBrightness, 0.3), 1.0);
 
         // interpolate the pixel color from black to input color using brightness factor
-        gl_FragColor = vec4(mix(vec4(0, 0, 0, v_color_mix.a), pixel_color * u_color, f));
+        vec4 scanlineColor = pixel_color * u_color;
+        gl_FragColor = vec4(mix(vec4(0, 0, 0, v_color_mix.a), scanlineColor, scanlineForce));
     } else {
         // use the current (transparent) color
         gl_FragColor = vec4(0, 0, 0, 0);
