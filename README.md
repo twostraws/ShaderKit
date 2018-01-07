@@ -524,7 +524,16 @@ func createRadialGradient() -> SKShader {
 }
 ```
 
-  
+
+### Scanlines
+Applies scanlines and pixelation to the node.
+
+**Parameters:**
+
+- Uniform: `u_width`, vertical width of scanlines, also width of pixelation
+- Uniform: `u_brightness`, brightness of scanlines, between 0 and 1.0. Higher values introduce overexposure.
+- Uniform: `u_color`, blend color of scanlines
+
 ### Screen
 Applies an interlacing effect where horizontal and vertical lines of original color are separated by lines of another color
 
