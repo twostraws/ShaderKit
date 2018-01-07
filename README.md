@@ -526,13 +526,32 @@ func createRadialGradient() -> SKShader {
 
 
 ### Scanlines
-Applies scanlines and pixelation to the node.
+Applies scanlines and pixelation to the node, giving a retro television effect.
 
 **Parameters:**
 
-- Uniform: `u_width`, vertical width of scanlines, also width of pixelation
+- Uniform: `u_width`, vertical width of scanlines and width of pixelation.
 - Uniform: `u_brightness`, brightness of scanlines, between 0 and 1.0. Higher values introduce overexposure.
-- Uniform: `u_color`, blend color of scanlines
+- Uniform: `u_color`, blend color of scanlines.
+
+Example code:
+
+```swift
+func createScanlines() -> SKShader {
+    let uniforms: [SKUniform] = [
+        SKUniform(name: "u_width", float: 4.0),
+        SKUniform(name: "u_brightness", float: 0.75),
+        SKUniform(name: "u_color", color: .white),
+    ]
+        
+    let attributes = [
+        SKAttribute(name: "a_size", type: .vectorFloat2)
+    ]
+        
+    return SKShader(fromFile: "SHKScanlines", uniforms: uniforms, attributes: attributes)
+}
+```
+
 
 ### Screen
 Applies an interlacing effect where horizontal and vertical lines of original color are separated by lines of another color
