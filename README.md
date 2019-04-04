@@ -7,7 +7,7 @@
     <img src="https://img.shields.io/badge/iOS-10.0+-blue.svg" />
     <img src="https://img.shields.io/badge/macOS-10.12+-brightgreen.svg" />
     <img src="https://img.shields.io/badge/GLSL-2.0-orange.svg" />
-    <img src="https://img.shields.io/badge/Swift-4.0-ff69b4.svg" />
+    <img src="https://img.shields.io/badge/Swift-5.0-ff69b4.svg" />
     <a href="https://twitter.com/twostraws">
         <img src="https://img.shields.io/badge/Contact-@twostraws-lightgrey.svg?style=flat" alt="Twitter: @twostraws" />
     </a>

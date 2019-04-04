@@ -1,7 +1,7 @@
 //
 // MIT License
 //
-// Copyright (c) 2017 Paul Hudson
+// Copyright (c) 2019 Paul Hudson
 // https://www.github.com/twostraws/ShaderKit
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
