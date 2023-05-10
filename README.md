@@ -20,6 +20,8 @@ If you’re already comfortable with shaders then please download one or more th
 
 ## See it in action
 
+This repository contains a cross-platform sample project demonstrating all the shaders in action. Although the shaders themselves work back to iOS 10 and macOS 10.12, the sample project is built using SwiftUI and requires iOS 16 and macOS 13.
+
 [![Show a video of the shaders in action](https://www.hackingwithswift.com/files/shaderkit/shaderkit-play.png)](https://www.hackingwithswift.com/files/shaderkit/shaderkit-example.mp4)
 
 
